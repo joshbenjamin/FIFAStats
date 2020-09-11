@@ -35,7 +35,11 @@ def create_game(connection: sqlite3.Connection, values: typing.Tuple[str]) -> in
 	cursor = connection.cursor()
 	cursor.execute(base_sql, values)
 	connection.commit()
-	return cursor.lastrowid
+
+	last_id = cursor.lastrowid
+	cursor.close()
+
+	return last_id
 
 
 def create_game_data(connection: sqlite3.Connection, values: typing.Tuple[str]):
@@ -48,6 +52,7 @@ def create_game_data(connection: sqlite3.Connection, values: typing.Tuple[str]):
 	cursor = connection.cursor()
 	cursor.execute(base_sql, values)
 	connection.commit()
+	cursor.close()
 
 
 def process_data(dictionary: typing.Dict[str, str], is_game: bool) -> typing.Tuple[str]:

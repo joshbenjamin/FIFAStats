@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a32cc45-8fe0-4c80-958a-4006ab9e1a78" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/database_connector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/databse_connector.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fifa.db" beforeDir="false" afterPath="$PROJECT_DIR$/fifa.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fifa.db-journal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_connector.py" beforeDir="false" afterPath="$PROJECT_DIR$/database_connector.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,8 +35,8 @@
       <file leaf-file-name="database_connector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database_connector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+            <state relative-caret-position="255">
+              <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
                 <element signature="e#517#525#0" />
@@ -66,6 +64,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/extracter.py" />
         <option value="$PROJECT_DIR$/databse_connector.py" />
+        <option value="$PROJECT_DIR$/database_connector.py" />
       </list>
     </option>
   </component>
@@ -223,8 +222,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database_connector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="48" column="36" lean-forward="true" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
+        <state relative-caret-position="255">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
             <element signature="e#517#525#0" />
