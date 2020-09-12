@@ -16,8 +16,30 @@ def main():
 	positions_file = "ImagePositions.txt"
 	image_file = "C:\\Users\\Joshua\\Documents\\Development\\FIFAStats\\Screenshots\\FIFA 20 Seasons (In Menus)_2.jpg"
 	ratings = read_file(positions_file)
-	extract_smaller_image(ratings[0].position_start, ratings[0].position_end, image_file, ratings)
+	# extract_smaller_image(ratings[0].position_start, ratings[0].position_end, image_file, ratings)
+	crop_image(ratings[0].position_start, ratings[0].position_end, image_file, ratings)
 	print("Hello World")
+
+
+def crop_image(start_pos: Position, end_pos: Position, file: str, ratings):
+	colours = {0: 'r', 1: 'g', 2: 'b'}
+
+	im = Image.open(file)
+	colour_int = -1
+
+	images = []
+	for rat in ratings:
+		# Create a Rectangle patch
+		colour_int = (colour_int + 1) % 3
+		width_height = width_and_height(rat.position_start, rat.position_end)
+		im_crop = im.crop((rat.position_start.x,
+						   rat.position_start.y,
+						   rat.position_start.x + width_height[0],
+						   rat.position_start.y + width_height[1]))
+		images.append(im_crop)
+
+	for img in images:
+		img.show()
 
 
 def extract_smaller_image(start_pos: Position, end_pos: Position, file: str, ratings):
@@ -48,7 +70,7 @@ def extract_smaller_image(start_pos: Position, end_pos: Position, file: str, rat
 
 def width_and_height(start_pos: Position, end_pos: Position) -> typing.Tuple[int, int]:
 	abs_x = int(math.fabs(end_pos.x - start_pos.x))
-	abs_y = int(math.fabs(end_pos.y - end_pos.x))
+	abs_y = int(math.fabs(end_pos.y - start_pos.y))
 	return (abs_x, abs_y)
 
 
