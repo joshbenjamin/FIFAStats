@@ -5,22 +5,33 @@ import math
 
 import typing
 
+START_POSITION_MAIN = Position(613, 204)
+END_POSITION_MAIN = Position(1702, 808)
+
 
 def main():
 	positions_file = "ImagePositions.txt"
 	image_file = "C:\\Users\\Joshua\\Documents\\Development\\FIFAStats\\Screenshots\\FIFA 20 Seasons (In Menus)_6.jpg"
+	image = Image.open(image_file)
 	ratings = read_file(positions_file)
-	crop_image(image_file, ratings)
-	print("Hello World")
+	print("Rating: " + rating_type(image, ratings))
+	crop_ratings_image(image)
 
 
-def crop_image(file: str, ratings: typing.List[Rating]) -> str:
+def crop_ratings_image(image: Image):
+	width_height = width_and_height(START_POSITION_MAIN, END_POSITION_MAIN)
+	im_crop = image.crop((START_POSITION_MAIN.x,
+						  START_POSITION_MAIN.y,
+						  START_POSITION_MAIN.x + width_height[0],
+						  START_POSITION_MAIN.y + width_height[1]))
+	im_crop.show()
 
-	im = Image.open(file)
+
+def rating_type(image: Image, ratings: typing.List[Rating]) -> str:
 
 	for rat in ratings:
 		width_height = width_and_height(rat.position_start, rat.position_end)
-		im_crop = im.crop((rat.position_start.x,
+		im_crop = image.crop((rat.position_start.x,
 						   rat.position_start.y,
 						   rat.position_start.x + width_height[0],
 						   rat.position_start.y + width_height[1]))
@@ -29,6 +40,8 @@ def crop_image(file: str, ratings: typing.List[Rating]) -> str:
 			print("THIS IS THE ONE: " + rat.title)
 			# im_crop.show()
 			return rat.title
+
+	return ""
 
 
 def analyse_block(image: Image) -> bool:
