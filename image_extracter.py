@@ -15,27 +15,22 @@ def main():
 
 
 def extract_smaller_image(start_pos: Position, end_pos: Position, file: str):
+	im = np.array(Image.open('stinkbug.png'), dtype=np.uint8)
 
+	# Create figure and axes
+	fig, ax = plt.subplots(1)
+
+	# Display the image
+	ax.imshow(im)
+
+	# Create a Rectangle patch
+	rect = patches.Rectangle((50, 100), 40, 30, linewidth=1, edgecolor='r', facecolor='none')
+
+	# Add the patch to the Axes
+	ax.add_patch(rect)
+
+	plt.show()
 
 
 if __name__ == "__main__":
 	main()
-
-
-
-
-im = np.array(Image.open('stinkbug.png'), dtype=np.uint8)
-
-# Create figure and axes
-fig,ax = plt.subplots(1)
-
-# Display the image
-ax.imshow(im)
-
-# Create a Rectangle patch
-rect = patches.Rectangle((50,100),40,30,linewidth=1,edgecolor='r',facecolor='none')
-
-# Add the patch to the Axes
-ax.add_patch(rect)
-
-plt.show()
