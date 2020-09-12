@@ -9,7 +9,7 @@ class Position:
 		self.x = int(x)
 		self.y = int(y)
 
-	def __str__(self):
+	def __str__(self) -> str:
 		return "(" + str(self.x) + ", " + str(self.y) + ")"
 
 
@@ -23,7 +23,7 @@ class Rating:
 		self.position_end = position_end
 		self.title = title
 
-	def __str__(self):
+	def __str__(self) -> str:
 		return self.title + "\nStart: " + str(self.position_start) + "\nEnd: " + str(self.position_end) + "\n"
 
 
