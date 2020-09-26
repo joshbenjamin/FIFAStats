@@ -15,12 +15,24 @@ END_POSITION_MAIN = Position(1702, 808)
 
 def main():
 	positions_file = "Positions - Performance.txt"
-	image_file = "C:\\Users\\Joshua\\Documents\\Development\\FIFAStats\\Screenshots\\FIFA 20 Seasons (In Menus)_6.jpg"
+	image_file = "C:\\Users\\Joshua\\Documents\\Development\\FIFAStats\\Pictures - Performance\\FIFA 20 Seasons (In Menus)_6.jpg"
 
 	image = Image.open(image_file)
 	scores = read_file(positions_file)
 
-	crop_ratings_image(image)
+	draw_rectangles(image, scores)
+	
+	# crop_ratings_image(image)
+
+
+def draw_rectangles(image: Image, scores: typing.List[Score]):
+	for score in scores:
+		width_height = width_and_height(score.position_start, score.position_end)
+		im_crop = image.crop((score.position_start.x,
+							  score.position_start.y,
+							  score.position_start.x + width_height[0],
+							  score.position_start.y + width_height[1]))
+		im_crop.show(score.title, im_crop)
 
 
 def tesseract_work(filename: str):
