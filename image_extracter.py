@@ -1,24 +1,25 @@
-from read_file import Position, Rating, read_file
+from read_file import Position, Score, read_file
 from tesseract_functions import *
 
 from PIL import Image
 import math
 import cv2
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
-
 import typing
+
+pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe'
 
 START_POSITION_MAIN = Position(613, 204)
 END_POSITION_MAIN = Position(1702, 808)
 
 
 def main():
-	positions_file = "ImagePositions.txt"
+	positions_file = "Positions - Performance.txt"
 	image_file = "C:\\Users\\Joshua\\Documents\\Development\\FIFAStats\\Screenshots\\FIFA 20 Seasons (In Menus)_6.jpg"
+
 	image = Image.open(image_file)
-	ratings = read_file(positions_file)
-	print("Rating: " + rating_type(image, ratings))
+	scores = read_file(positions_file)
+
 	crop_ratings_image(image)
 
 
@@ -52,19 +53,14 @@ def crop_ratings_image(image: Image):
 	tesseract_work("temp.png")
 
 
-def rating_type(image: Image, ratings: typing.List[Rating]) -> str:
+def rating_type(image: Image, scores: typing.List[Score]) -> str:
 
-	for rat in ratings:
-		width_height = width_and_height(rat.position_start, rat.position_end)
-		im_crop = image.crop((rat.position_start.x,
-						   rat.position_start.y,
-						   rat.position_start.x + width_height[0],
-						   rat.position_start.y + width_height[1]))
-
-		if analyse_block(im_crop):
-			print("THIS IS THE ONE: " + rat.title)
-			# im_crop.show()
-			return rat.title
+	for score in scores:
+		width_height = width_and_height(score.position_start, score.position_end)
+		im_crop = image.crop((score.position_start.x,
+							  score.position_start.y,
+							  score.position_start.x + width_height[0],
+							  score.position_start.y + width_height[1]))
 
 	return ""
 
