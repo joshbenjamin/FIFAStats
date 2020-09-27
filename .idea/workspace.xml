@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a32cc45-8fe0-4c80-958a-4006ab9e1a78" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Pictures - Performance/FIFA 20 Seasons (In Menus)_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Pictures - Performance/FIFA 20 Seasons (In Menus)_6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Positions - Performance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Positions - Performance.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/image_extracter.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_extracter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,7 +85,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="width" value="979" />
     <option name="height" value="1040" />
@@ -180,7 +182,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
