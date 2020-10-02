@@ -24,13 +24,6 @@ def main():
 	indi_image(image, scores)
 
 
-def analyse_image(type_char: str, image: Image):
-	cv2_image = numpy.array(image.convert('RGB'))
-	# cv2_image = cv2_image[:, :, ::-1].copy()           unused, to convert RGB-to-BGR
-	if type_char == "number":
-		tesseract_work(cv2_image)
-
-
 def indi_image(image: Image, scores: typing.List[Score]):
 	# for score in scores:
 
@@ -47,11 +40,19 @@ def indi_image(image: Image, scores: typing.List[Score]):
 		analyse_image("number", im_crop)
 
 
+def analyse_image(type_char: str, image: Image):
+	cv2_image = numpy.array(image.convert('RGB'))
+	# cv2_image = cv2_image[:, :, ::-1].copy()           unused, to convert RGB-to-BGR
+	if type_char == "number":
+		tesseract_work(cv2_image)
+
+
 def tesseract_work(image: numpy.ndarray):
 	# image = cv2.imread(filename)
 	# gray = get_grayscale(image)
 	# thresh = thresholding(image)
 
+	""" This is to draw rectangles """
 	"""
 	h, w, c = thresh.shape
 	boxes = pytesseract.image_to_boxes(thresh)
@@ -59,20 +60,20 @@ def tesseract_work(image: numpy.ndarray):
 		b = b.split(' ')
 		thresh = cv2.rectangle(thresh, (int(b[1]), h - int(b[2])), (int(b[3]), h - int(b[4])), (0, 255, 0), 2)
 	"""
-	print(type(image))
-	cv2.imshow('img', image)
-	cv2.waitKey(0)
+
+	# Show image
+	# cv2.imshow('img', image)
+	# cv2.waitKey(0)
 
 	custom_config = r'--oem 3 --psm 6'
 	image_text = pytesseract.image_to_string(image, config=custom_config)
 	image_text = strip_arrow(image_text)
-	# print(image_text)
-	# cv2.imshow('thresh', thresh)
-	# cv2.waitKey(0)
+
 
 def strip_arrow(text: str):
-	print(text)
+	text = text.replace(chr(12), '').strip()
 	return text
+
 
 def rating_type(image: Image, scores: typing.List[Score]) -> str:
 
