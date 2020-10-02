@@ -21,7 +21,7 @@ def main():
 	scores = read_file(positions_file)
 
 	draw_rectangles(image, scores)
-	
+
 	# crop_ratings_image(image)
 
 
