@@ -26,9 +26,7 @@ def main():
 
 def indi_image(image: Image, scores: typing.List[Score]):
 	# for score in scores:
-
-	# for i in range(0, len(scores)):
-	for i in range(5, 6):
+	for i in range(0, len(scores)):
 		score = scores[i]
 		width_height = width_and_height(score.position_start, score.position_end)
 		im_crop = image.crop((score.position_start.x,
@@ -37,14 +35,20 @@ def indi_image(image: Image, scores: typing.List[Score]):
 							  score.position_start.y + width_height[1]))
 		# im_crop.show(score.title, im_crop)
 		# im_crop.save("temp.png", "PNG")
-		analyse_image("number", im_crop)
+
+		image_text = analyse_image("number", im_crop)
+		print_scores(score, image_text)
+
+
+def print_scores(score: Score, image_text: str):
+	print("%s:\n%s\n" % (score.title, image_text))
 
 
 def analyse_image(type_char: str, image: Image):
 	cv2_image = numpy.array(image.convert('RGB'))
 	# cv2_image = cv2_image[:, :, ::-1].copy()           unused, to convert RGB-to-BGR
 	if type_char == "number":
-		tesseract_work(cv2_image)
+		return tesseract_work(cv2_image)
 
 
 def tesseract_work(image: numpy.ndarray):
@@ -68,6 +72,8 @@ def tesseract_work(image: numpy.ndarray):
 	custom_config = r'--oem 3 --psm 6'
 	image_text = pytesseract.image_to_string(image, config=custom_config)
 	image_text = strip_arrow(image_text)
+	return image_text
+	# print(image_text)
 
 
 def strip_arrow(text: str):
