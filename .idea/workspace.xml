@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a32cc45-8fe0-4c80-958a-4006ab9e1a78" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/image_extracter.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_extracter.py" afterDir="false" />
-    </list>
+    <list default="true" id="9a32cc45-8fe0-4c80-958a-4006ab9e1a78" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,26 +15,33 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="68">
-                <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+              <first_editor relative-caret-position="34">
+                <caret line="2" selection-start-line="2" selection-end-line="2" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_extracter.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="image_extracter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/image_extracter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="43" column="50" lean-forward="true" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+            <state relative-caret-position="340">
+              <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
-                <element signature="e#2114#2177#0" />
-                <element signature="e#2208#2500#0" />
                 <element signature="e#2545#3002#0" />
                 <element signature="e#3094#3211#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controller.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -53,17 +58,8 @@
       <file leaf-file-name="read_file.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/read_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="-2">
               <caret line="28" selection-start-line="28" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tesseract_functions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tesseract_functions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" selection-start-column="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -91,6 +87,7 @@
         <option value="$PROJECT_DIR$/tesseract_functions.py" />
         <option value="$PROJECT_DIR$/read_file.py" />
         <option value="$PROJECT_DIR$/image_extracter.py" />
+        <option value="$PROJECT_DIR$/controller.py" />
       </list>
     </option>
   </component>
@@ -120,7 +117,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/image_extracter.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/controller.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -135,7 +132,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Extracter">
+  <component name="RunManager" selected="Python.Controller">
+    <configuration name="Controller" type="PythonConfigurationType" factoryName="Python">
+      <module name="FIFAStats" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Joshua\Documents\Development\FIFAStats\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/controller.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="DB" type="PythonConfigurationType" factoryName="Python">
       <module name="FIFAStats" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,6 +189,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.Extracter" />
+      <item itemvalue="Python.Controller" />
       <item itemvalue="Python.DB" />
     </list>
   </component>
@@ -232,6 +248,42 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/database_connector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/read_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heatmap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image_extracter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" selection-start-line="16" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+            <element signature="e#2545#3002#0" />
+            <element signature="e#3094#3211#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -262,8 +314,6 @@
           <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
-            <element signature="e#2114#2177#0" />
-            <element signature="e#2208#2500#0" />
             <element signature="e#2545#3002#0" />
             <element signature="e#3094#3211#0" />
           </folding>
@@ -293,8 +343,6 @@
           <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
-            <element signature="e#2114#2177#0" />
-            <element signature="e#2208#2500#0" />
             <element signature="e#2545#3002#0" />
             <element signature="e#3094#3211#0" />
           </folding>
@@ -372,9 +420,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.png" />
     <entry file="file://$PROJECT_DIR$/tesseract_functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -395,8 +441,6 @@
           <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
-            <element signature="e#2114#2177#0" />
-            <element signature="e#2208#2500#0" />
             <element signature="e#2545#3002#0" />
             <element signature="e#3094#3211#0" />
           </folding>
@@ -426,8 +470,6 @@
           <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
-            <element signature="e#2114#2177#0" />
-            <element signature="e#2208#2500#0" />
             <element signature="e#2545#3002#0" />
             <element signature="e#3094#3211#0" />
           </folding>
@@ -491,19 +533,17 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+          <first_editor relative-caret-position="34">
+            <caret line="2" selection-start-line="2" selection-end-line="2" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.png" />
     <entry file="file://$PROJECT_DIR$/read_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="-2">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
@@ -524,15 +564,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/image_extracter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="43" column="50" lean-forward="true" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+        <state relative-caret-position="340">
+          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
-            <element signature="e#2114#2177#0" />
-            <element signature="e#2208#2500#0" />
             <element signature="e#2545#3002#0" />
             <element signature="e#3094#3211#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
