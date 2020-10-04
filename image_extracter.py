@@ -25,7 +25,7 @@ def main():
 
 
 def indi_image(image: Image, scores: typing.List[Score]):
-	# for score in scores:
+	results = {}
 	for i in range(0, len(scores)):
 		score = scores[i]
 		width_height = width_and_height(score.position_start, score.position_end)
@@ -37,7 +37,8 @@ def indi_image(image: Image, scores: typing.List[Score]):
 		# im_crop.save("temp.png", "PNG")
 
 		image_text = analyse_image("number", im_crop)
-		print_scores(score, image_text)
+		# print_scores(score, image_text)
+		results[score.title] = image_text
 
 
 def print_scores(score: Score, image_text: str):
